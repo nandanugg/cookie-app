@@ -1,4 +1,10 @@
 import { createApp } from 'vue'
+import VueCookies from 'vue3-cookies'
 import App from './App.vue'
 
-createApp(App).mount('#app')
+const Vue = createApp(App)
+Vue.use(VueCookies, {
+    expireTimes: "1d"
+})
+
+Vue.mount('#app')
